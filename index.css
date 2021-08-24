@@ -1,0 +1,506 @@
+/* Google Fonts which I selected for this particular task*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,700,800,900&display=swap');
+
+/* The asterisks covers the entirety of the responsive personal CV */
+/* The margin is set to 0 for the entire page  */
+/* The padding for the entire page is set to 0 */
+/* the box sizing of the page has been set to border box as there are many div tags on the page so each section forms its own box/squared off area */
+/* The font family from the whole page has been set using the poppins form google fonts */
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* The body background has been set of the entire webpage has been set to lightblue so you can see the contrast between my personal cv and the webpage background */
+/* The display of the body has been ser to flex  */
+/* The content has been justified to the center of the page  */
+/* The items in the entire body are aligned to the center of the webpage */
+/* The minimum height has been set to 100 view height of the entire webpage (vh) */
+body 
+{
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+}
+
+/* The period (.) to the classes I have used in the HTML and are helped to connect the HTML (index.html) page to the Style sheet (index.css)*/
+/* The .container is for the right side of the cv and the left side of the cv page in side the webpage */
+/* Thw width of the container for the cv page has been set to 100% */
+/* The max width of the cv page has been set to 1200pixels (px) */
+/* The background of the webpage has been set to white to be a give contrast against the color of the background of the webpage */
+/* The margin for the container has been set to 50pixels (px) for the cv page */
+/* The display for the cv page (.container) has been set to grid as for the div tags on the actual cv page */
+/* Therefore had to map out the grid column template for the cv page which is 1fr = 1fraction which will be the left side of the cv page */
+/* And the 2fr = 2fractions refers to white of the cv page which is called the right side of the cv page */
+/* The box shadow has been set black just so there is separation between the webpage and the .container (cv page) */
+.container 
+{
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 1500px;
+    background: white;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0,0,0,0.1);
+}
+
+/* The container left side refers to where the image of my self will be placed as well educational history & contact details and the language I speak */
+/* The position is set to relative and refers to the position for the various elements that will be put into this container */
+/* The padding for containers left side has been set to 40pixels (px) */
+.container .left_Side 
+{
+    position: relative;
+    background: #003147;
+    padding: 40px;
+}
+
+/* This refers to the class for the profile picture text underneath the my image profile */
+/* The display for the text has been set to flex for the text underneath under my profile image */
+/* The flex direction for the has been set to column */
+/* The items refers to the text itself has been set to center */
+/* The padding bottom of the text has been set has been set to 20pixels (px) */
+/* The border bottom of the page has been set just to show some separation between the the text under the my image asn the rest of the contents below it */
+.profileText 
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+/* This is the class for the profile image how its going to be styled above the text */
+/* The position of the div tag for image has been set to relative for image element */
+/* The width of the div tag has been set to 200pixels (px) which means the image has been shrunk to fit */
+/* The height of the div tag has been set to 200pixels (px) which means the height of the image has been shrunk to fit as well */
+/* The border radius of the image has been set to 50% so the profile image can be set 50% so it can turn into a full circle from square */
+/* The overflow for the image is hidden which means that image extra will not shown outside the border radius  */
+.profileText .imgBX 
+{
+    position: relative;
+    width: 200px;
+    height: 200px; 
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/* The profile image as well as the text position has been set to absolute */
+/* The top is used when the positions is absolute and the sets the nearest position ancestor */
+/* The left is used for how much you want a certain element to move to the left in % */
+/* The width of the image has been set to 100%  */
+/* The height of the image has been set to 100% */
+/* The image object fit has been set sets how the content of a replaced element  */
+.profileText .imgBX img 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* The profile text h2 has been set for the h2 tag */
+/* The color of the text has been set to white so it can be seen behind on the left container background */
+/* The the em is simply used as for the font size and depends for the font style as well but its works for poppins font from google */
+/* The margin top refers to the area of above the element */
+/* The text transform refers to the wants the font to be uppercase eg Capital Letters */
+/* The text align has been set to h2 tag to the center */
+/* The font weight has been set to 600 which is part of the font from google */
+/* The line height has been 1.4em is for the line height of the font in uppercase */
+.profileText h2 
+{
+    color: white;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+
+/* The profile text refers to the span text which is for the which is student */
+/* The font size has been set to has been set to 0.8em */
+/* The fon weight has been set to 300 */
+.profileText h2 span 
+{
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+/* The contact info refers to the class for my contact details */
+/* The padding for the div tag has been set 40pixels (px) between the element above and contact detail section */
+.contactInfo 
+{
+    padding-top: 40px;
+}
+
+/* The title class refers to the h3 tags which has the unordered list for the contact details */
+/* The color for the text has been set to white so it can be seen on the left side */
+/* The text transform has been set to uppercase */
+/* The font weight has been set to 600 */
+/* The letter spacing has been set to 1pixel (px) between each letter */
+/* The margin bottom of the title element has been set to 20pixels (px) */
+.title 
+{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+/* The contact info unordered list position has been set to relative for the contact detail elements */
+.contactInfo ul 
+{
+    position: relative;
+}
+
+/* The contact details elements for the list have been styled now */
+/* The list style refers to the bullet points being removed */
+/* The position of the list elements has been set to relative */
+/* The margin of the list elements has been set the top of the margin is set to 10pixels (px) and the left/right side of the list element has been set */
+/* The cursor has been set to pointer for the contact details the mouse cursor will switch to a pointer */
+.contactInfo ul li 
+{
+    list-style: none;
+    position: relative;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+/* This refers to the contact details icons such as the twitter, linkedin and other icons for the contact details */
+/* The display for the icons has been set to inline block */
+/* The width of the icons has been set to 30pixels (px) */
+/* The font size of the icons has been set to 18pixels (px) for the icon size */
+/* The color of the icons has been set to color below for the contact details icons */
+.contactInfo ul li .icon 
+{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #03a9f4;
+}
+
+/* The contact info span refers to the text next to the icons */
+/* The color of the text has been set to white */
+/* The font weight of the text next to the icons has been set to 300 for the text font */
+.contactInfo ul li span 
+{
+    color: white;
+    font-weight: 300;
+}
+
+/* The contact info education refers to educational history below the contact list on the cv page */
+/* The educational section margin bottom for the list items has been set to 15pixels (px) */
+.contactInfo.Education li 
+{
+    margin-bottom: 15px;
+}
+
+/* The contact info for the education section for the h5 tags refers to the years i was at that particular school */
+/* The years have been set to the color below for the text */
+/* The font weight of the text has been set to 500 */
+.contactInfo.Education h5 
+{
+    color: #03a9f4;
+    font-weight: 500;
+}
+
+/* The h4 tag referred as the h4:nth-child means select element (2) it is the second child of a parent */
+/* The color refers to the color for the text to be the color below */
+/* Also known as this cause there are two h4 tags above each hence why I used the nth-child plus needed to separate the h4 tags */
+/* This for the Grades for the educational section */
+/* The font weight is set to 500 for the h4:nth-child(2) Tag */
+.contactInfo.Education h4:nth-child(2) 
+{
+    color: white;
+    font-weight: 500;
+}
+
+/* The h4 tag refers to the h4 tag for the schools and the location of where those schools are from in terms of location in RSA */
+/* The text colo for the h4 tag has been set to color below */
+/* The font weight for the h4 tag has been set to 300 */
+.contactInfo.Education h4 
+{
+    color: white; 
+    font-weight: 300;
+}
+
+/* The is the class tag for the percentage for the languages I speak its for the horizontal bar */
+/* The position of the horizontal has been set to relative for the bar */
+/* The width of the bar has been set to 100% */
+/* The height of the bar has been set 6pixels (px) */
+/* The background of the bar has been set to the color below */
+/* The display of the bar has been set to block for language bar */
+/* The margin top of the bar has been set to 5pixels (px) */
+.contactInfo.languages .percent 
+{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #081921;
+    display: block;
+    margin-top: 5px;
+}
+
+/* The div tag for the percent refers to the actual number of what i think out 100% what */
+/* The position of the bar is set to absolute */
+/* The top bar element has been set to top = 0 of the bar element */
+/* The left of the element has been set to 0 for the bar element */
+/* The height of the div percentage has been set to 100% to match the dark bar to show contrast */
+/* The background color has been set to the color below to show container */
+.contactInfo.languages .percent div 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+
+/* Now its time to look at the style of the right side */
+/* The container on the right side is where the short bio, work experience, the skills & competency, previous projects and my interests */
+/* The position has been set to relative for the right side container */
+/* The background has been set to the color below */
+/* The padding has been set 40pixels (px) */
+.container .right_Side 
+{
+    position: relative;
+    background: white;
+    padding: 40px;
+}
+
+/* The Bio refers to the class for my short bio of my life  */
+/* The margin bottom refers the bottom for the short bio element set to 50pixels (px) */
+.Bio 
+{
+    margin-bottom: 50px;
+}
+
+/* The bio last child means the last element among a group of sibling elements. */
+/* The margin bottom of this element has been set 0 */
+.Bio:last-child 
+{
+    margin-bottom: 0;
+}
+
+/* The title2 refers to my previous work experience, skills & competency, previous projects & interests  */
+/* The color has been set to the color below for each title in the right side*/
+/* The text transform has been set uppercase for each title for each right side container */
+/* The letter spacing for the title has been set to 1pixel (px) between letters in the title */
+/* The margin bottom for each title2 element has been set to 10pixels (px) */
+.title2 
+{
+    color: #003147;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+/* The p tags for my previous work experience has been set to the text color below */
+p 
+{
+    color: #333;
+}
+
+/* The class for the about & class for the box have been styled at the bottom */
+/* The display has been set to flex */
+/* The flex direction has been set to column */
+/* The margin for the top has been set 20pixels (px) and 0 has been set to for the left/right */
+.about .box 
+{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+/* This refers to the h5 tags that feature year & company quite self explanatory */
+/* The min width of the div has been set to 150pixels (px) */
+.about .box .year_company 
+{
+    min-width: 150px;
+}
+
+/* The year of the company and the h5 tags which are featured for this style right here */
+/* The text for the h5 tags have been transformed to uppercase */
+/* The color has been set to the color below */
+/* The font weight for h5 tags has been set to 600 */
+.about .box .year_company h5 
+{
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 600;
+}
+
+/* This refers to text within the div class text & is for the h4 tags */
+/* The h4 tags have been transformed to the uppercase */
+/* The color for he h4 tags has been set the color below */
+/* The font size of the h4 tags has been set 16pixels (px) */
+.about .box .text h4 
+{
+    text-transform: uppercase;
+    color: #2a7da2;
+    font-size: 16px;
+}
+
+/* The refers to the div class for my skills & competency section of the right side container for each skill */
+/* Competency used measuring a horizontal bar */
+/* The position for skills has been set to relative */
+/* The width of the horizontal bar */
+/* The display has been set the grid view  */
+/* The grid template columns has been set 150px 1fr */
+/* The content has been justified the content to the center */
+/* The items have aligned to the center */
+.Skills .box 
+{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+/* The skills h4 tags have been styled here */
+/* The h4 tags have been transformed to uppercase */
+/* The color of the h4 tags has been set below */
+/* The font weight of the h4 tags has been set to 500 */
+.Skills .box h4 
+{
+    text-transform: uppercase;
+    color: #848c99;
+    font-weight: 500; 
+}
+
+/* The skills percent refers to the horizontal bar background */
+/* The position has been set to relative for the horizontal bar bg */
+/* The width of the horizontal bar has been set to 100% */
+/* The height of the horizontal bar has been set 10pixels (px) */
+/* The background color od the horizontal bar has been set to the color below */
+.Skills .box .percent 
+{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #f0f0f0;
+}
+
+/* The skills refers to the actual div percent bar that will be above the bar above */
+/* The bars position is absolute */
+/* The top of the element is 0 */
+/* The left of the element is 0 */
+/* The height of the bar has been set 100% */
+/* The bar color has been set to the color below */
+.Skills .box .percent div 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #30a9f4;
+}
+
+/* The myProjects refers to the unordered list */
+/* The display has for list items has been set grid */
+/* The grid template column has been set to (1, 1fr) */
+/* The list style has been set to none to remove the bullet points */
+.myProjects ul li 
+{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    list-style: none;
+}
+
+/* The text for the project links has been styled on the my cv page */
+/* The text decoration removes the lines under the link to github */
+/* The font weight has been set to 500 */
+/* The margin has been set to 10pixels for the top and the left/right has been set to 0 */
+/* The color has been set to the color below */
+.myProjects ul li a 
+{
+    text-decoration: none;
+    font-weight: 500;
+    margin: 10px 0;
+    color: #003147;
+}
+
+/* The myInterests refers to my interests/hobbies */
+/* This refers to the unordered list  */
+/* The interests is set the display to grid */
+/* The gid template columns has been set (2, 1fr) */
+.myInterest ul 
+{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+/* The list items for my interests have been styled like as follows */
+/* The list style means the bullet points are removed */
+/* The color of the text has been set to the color below */
+/* The fon weight has been set 500 */
+/* The margin for the top of the text has been set to 10pixels & the left/right has been set to 0 */
+.myInterest ul li 
+{
+    list-style: none;
+    color: #333;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+/* This to style the my interests icons for the my interests */
+/* The color of the icons has been set to the color below */
+/* The font size of the icons has been set to 18pixels (px) */
+/* The width of the icons has been set 20pixels (px) */
+.myInterest ul li .fa {
+    color: #03a9f4;
+    font-size: 18px;
+    width: 20px;
+
+}
+
+/* This refers to the responsiveness of the CV Page depending on what device your viewing the cv page on */
+/* The max width has been set 1000pixels (px) depending on the what device the user is viewing on */
+/* The margin of the container has been set 10pixels (px) */
+/* The grid template columns has been set to repeat (1, 1fr) which means this a repeated fragment of the track list, allowing a large number of columns or rows that exhibit a recurring pattern to be written in a more compact form */
+/* The grid template columns has been set to repeat for the interest container  (2, 1fr) on bigger screen*/
+@media (max-width: 1000px)
+{
+    .container 
+    {
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .interest 
+    {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+/* This refers when the users display is viewing the cv on a phone which means the max width of the cv has been set 600pixels (px) */
+/* hence why the my interests container has been set to (1, 1fr) */
+/* Also the margin bottom of the companies has been set to 5pixels (px) on smaller devices such as phones, small tablets or a device in portrait mode */
+/* The skills container box will also been seen as (1, 1fr) */
+@media (max-width: 600px)
+{
+    .about .box .year_company
+    {
+        margin-bottom: 5px;
+    }
+    .interest ul 
+    {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .Skills .box 
+    {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
